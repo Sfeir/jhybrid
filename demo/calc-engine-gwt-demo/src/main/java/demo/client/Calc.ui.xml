@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <g:HTMLPanel>
+
+        <g:TextBox ui:field="text"/>
+
+        <g:Label ui:field="label"/>
+
+        <g:Button ui:field="button"/>
+
+    </g:HTMLPanel>
+</ui:UiBinder>
