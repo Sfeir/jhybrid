@@ -26,7 +26,7 @@ Example :
 
 ### Testing Javascript
 
-- Go to `demo/calc-engine-gwt-demo` directory
+- Go to `demo/calc-engine-js-demo` directory
 - Run command `mvn jetty:run-war`
 - Open your internet browser and call the following URL : `http://localhost:9999/`
 - Read and follow the displayed indications
