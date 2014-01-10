@@ -37,6 +37,7 @@
     <modules>
         <module>calc-engine-core</module>
         <module>calc-engine-gwt</module>
+        <module>calc-engine-javascript</module>
         <module>demo</module>
     </modules>
 

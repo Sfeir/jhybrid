@@ -1,13 +1,12 @@
 #import <Foundation/Foundation.h>
-#include "build/CalcEngine.h"
-#include "build/CalcEngineImpl.h"
-#include "build/CalcMain.h"
+#include "com/sfeir/calc/CalcEngine.h"
+#include "com/sfeir/calc/CalcEngineImpl.h"
 
 int main (int argc, const char * argv[]) {
 
     @autoreleasepool {
 
-        id<CalcEngine> calcEngine = [[CalcEngineImpl alloc] init];
+        id<ComSfeirCalcCalcEngine> calcEngine = [[ComSfeirCalcCalcEngineImpl alloc] init];
 
         printf ("insert expression...\n");
 

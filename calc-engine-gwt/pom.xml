@@ -45,38 +45,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <!-- http://mojo.codehaus.org/gwt-maven-plugin -->
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>gwt-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <extraJvmArgs>-Xmx1024M</extraJvmArgs>
-                    <module>com.sfeir.Exporter</module>
-                    <runTarget>http://localhost/</runTarget>
-                    <logLevel>INFO</logLevel>
-                    <hostedWebapp>${project.build.directory}/devmode</hostedWebapp>
-                    <noServer>true</noServer>
-                    <compileReport>false</compileReport>
-                    <webappDirectory>${gwt.output}</webappDirectory>
-                    <!-- <compileReport>true</compileReport> -->
-                    <gen>${project.build.directory}/gwt/gen</gen>
-                    <extra>${project.build.directory}/gwt/extra</extra>
-                    <persistentunitcachedir>${project.build.directory}/gwt</persistentunitcachedir>
-                    <treeLogger>true</treeLogger>
-                </configuration>
-            </plugin>
         </plugins>
-
-
     </build>
 
 

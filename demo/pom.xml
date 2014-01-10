@@ -16,6 +16,7 @@
 
     <modules>
         <module>calc-engine-gwt-demo</module>
+        <module>calc-engine-js-demo</module>
     </modules>
 
 </project>

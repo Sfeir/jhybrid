@@ -2,11 +2,11 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
     <g:HTMLPanel>
 
-        <g:TextBox ui:field="text"/>
+        <div><g:TextBox ui:field="text"/></div>
 
-        <g:Label ui:field="label"/>
+        <div><g:Label ui:field="label"/></div>
 
-        <g:Button ui:field="button"/>
+        <div><g:Button ui:field="button" text="evaluate"/></div>
 
     </g:HTMLPanel>
 </ui:UiBinder>

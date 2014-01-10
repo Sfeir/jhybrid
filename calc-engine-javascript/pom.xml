@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sfeir</groupId>
+        <artifactId>CalculationEngine</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <artifactId>calc-engine-javascript</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sfeir</groupId>
+            <artifactId>calc-engine-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sfeir</groupId>
+            <artifactId>calc-engine-core</artifactId>
+            <classifier>sources</classifier>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sfeir</groupId>
+            <artifactId>calc-engine-gwt</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- http://mojo.codehaus.org/gwt-maven-plugin -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <extraJvmArgs>-Xmx1024M</extraJvmArgs>
+                    <module>com.sfeir.Exporter</module>
+                    <runTarget>http://localhost/</runTarget>
+                    <logLevel>INFO</logLevel>
+                    <hostedWebapp>${project.build.directory}/devmode</hostedWebapp>
+                    <noServer>true</noServer>
+                    <compileReport>false</compileReport>
+                    <webappDirectory>${gwt.output}</webappDirectory>
+                    <!-- <compileReport>true</compileReport> -->
+                    <gen>${project.build.directory}/gwt/gen</gen>
+                    <extra>${project.build.directory}/gwt/extra</extra>
+                    <persistentunitcachedir>${project.build.directory}/gwt</persistentunitcachedir>
+                    <treeLogger>true</treeLogger>
+                </configuration>
+            </plugin>
+        </plugins>
+
+
+    </build>
+
+
+</project>

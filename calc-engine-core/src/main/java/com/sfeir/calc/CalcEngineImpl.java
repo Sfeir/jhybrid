@@ -4,6 +4,7 @@ public class CalcEngineImpl implements CalcEngine {
 
     @Override
     public int evaluate(String expression) {
+
         if (expression.contains("+")) {
             String[] parts = expression.split("[+]");
 
