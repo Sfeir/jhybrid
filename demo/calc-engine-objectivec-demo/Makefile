@@ -15,11 +15,11 @@ OBJC_SOURCES = $(OBJECTS:.o=.m)
 
 RESULT = launcher
 
-launcher: translate $(OBJECTS)
-	$(J2OBJCC) -o $(RESULT) $(OBJECTS)
-
 calc: launcher
 	$(J2OBJCC) src/main.m -o calc $(OBJECTS) -I$(BUILD_DIR)
+	
+launcher: translate $(OBJECTS)
+	$(J2OBJCC) -o $(RESULT) $(OBJECTS)
 
 clean:
 	@rm -rf $(RESULT) $(BUILD_DIR)
