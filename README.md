@@ -37,7 +37,7 @@ Example :
 
 - Go to `demo/calc-engine-objectivec-demo` directory
 - Run make, it will create two executables : one called `launcher` and other called `calc`
-    - the `launcher` executes any Java class containig a main function. In ower case the class is CalcMain.
+    - the `launcher` executes any Java class containig a main function. In our case the class is CalcMain.
     The full command is `./launcher com.sfeir.calc.CalcMain expression`. Example `./launcher com.sfeir.calc.CalcMain 36+69`.
     - the `calc` executable corresponds to the native code that references the transcompiled Javacode. Please take a look to the `main.m` source file.
 
