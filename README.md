@@ -1,9 +1,9 @@
 ### Description
 
-If you follow the following steps, you will build a gwt, javascript and Objective-C calculators.
+If you follow the following steps, you will build gwt, javascript and Objective-C calculators.
 These calculators are built from a single java code base.
 
-This demo illustrates what Ray Cromwell call a new generation of Hybrid application :
+This demo illustrates what Ray Cromwell call a new generation of Hybrid applications :
 - Shares logic between Server, Android, Web, and iOS via Java code. 
 - Cross compiled with GWT and j2objc 
 - Android and iOS UIs marry Java and Obj-C UI with shared Java.
