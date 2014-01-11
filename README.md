@@ -9,8 +9,6 @@ This demo illustrates what Ray Cromwell call a new generation of Hybrid applicat
 - Android and iOS UIs marry Java and Obj-C UI with shared Java.
 http://www.slideshare.net/cromwellian1/gwtcreate-keynote-san-francisco
 
-
-
 ### Requirements
 
 - Java 6 (Java 7 syntax is not yet supported)
@@ -56,4 +54,6 @@ Example :
 
 - to clean objects run `make clean`, to remove executables run `make mrclean`
 
-
+### Improving the Calculator
+- Edit calc-engine-core/src/main/java/com/sfeir/calc/CalcEngineImpl.java
+- Rebuild, that's it
