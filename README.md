@@ -13,7 +13,9 @@ http://www.slideshare.net/cromwellian1/gwtcreate-keynote-san-francisco
 
 - Java 6 (Java 7 syntax is not yet supported)
 - Maven
+- Android : The Android SDK
 - XCode and the command line compiler tools for the Mac OS part.
+
 
 ### J2Objc installation
 - Download J2Objc (https://code.google.com/p/j2objc/) and extract it.
@@ -43,8 +45,22 @@ Example :
 - Read and follow the displayed indications
 - To stop jetty, run the command `mvn jetty:stop`
 
+### Testing Android
+
+#### Setup
+- Download and install the [Android SDK](http://developer.android.com/sdk/index.html)
+- Set the `ANDROID_HOME` environment variable that points to the installation directory of the Android SDK.
+- Add `$ANDROID_HOME/tools` and `$ANDROID_HOME/platform-tools` to your`PATH`.
+- Launch an Android Virtual Device or plug your Android phone (tutorial can be found [here](http://developer.android.com/training/basics/firstapp/running-app.html#RealDevice)).
+
+#### Testing
+
+- Go to `demo/calc-engine-android-demo` directory
+- Run command `mvn clean package android:deploy`
+
+
 ### Testing Objective-C
-*Don't forget to define the J2OBJC_DISTRIBUTION env variable!*
+*Don't forget to define the J2OBJC_DISTRIBUTION environment variable!*
 
 - Go to `demo/calc-engine-objectivec-demo` directory
 - Run make, it will create two executables : one called `launcher` and other called `calc`

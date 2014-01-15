@@ -10,6 +10,9 @@
     <packaging>pom</packaging>
     <properties>
         <gwt.version>2.5.1</gwt.version>
+        <android.api.version>4.1.1.4</android.api.version>
+        <junit.version>4.10</junit.version>
+        <android.platform>19</android.platform>
     </properties>
 
     <dependencyManagement>
@@ -18,6 +21,16 @@
                 <groupId>com.google.gwt</groupId>
                 <artifactId>gwt-user</artifactId>
                 <version>${gwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android</artifactId>
+                <version>${android.api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -29,6 +42,43 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>gwt-maven-plugin</artifactId>
                     <version>2.5.1</version>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-jarsigner-plugin</artifactId>
+                    <version>1.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.8.2</version>
+                    <configuration>
+                        <sdk>
+                            <platform>${android.platform}</platform>
+                        </sdk>
+                        <emulator>
+                            <avd>23</avd>
+                            <wait>10000</wait>
+                            <!--<options>-no-skin</options> -->
+                        </emulator>
+                        <zipalign>
+                            <verbose>true</verbose>
+                        </zipalign>
+                        <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.5</version>
                 </plugin>
             </plugins>
         </pluginManagement>

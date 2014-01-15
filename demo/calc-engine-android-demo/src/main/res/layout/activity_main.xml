@@ -1,0 +1,21 @@
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:orientation="horizontal"
+    tools:context=".MainActivity" >
+    
+<EditText a:id="@+id/edit_message"
+        a:layout_width="0dp"
+        a:layout_height="wrap_content"
+        a:hint="@string/edit_message" 
+        a:layout_weight="1" a:inputType="none"/>
+
+ <Button a:layout_width="wrap_content"
+        a:layout_height="wrap_content"
+        a:text="@string/button_send" 
+        a:onClick="sendMessage"/>
+ 
+ 
+
+</LinearLayout>
