@@ -1,3 +1,5 @@
+## Starter kit for a new generation of hybrid applications
+
 ### Description
 
 If you follow the following steps, you will build gwt, javascript and Objective-C calculators.
