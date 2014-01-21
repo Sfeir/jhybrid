@@ -15,8 +15,16 @@ public class Exporter implements EntryPoint {
     }
 
     private native void export(Exporter instance) /*-{
-      $wnd.evaluate = function(expr) {
+
+      var CalcEngine = function(){}
+
+      CalcEngine.prototype.evaluate = function(expr) {
          return instance.@com.sfeir.exporter.Exporter::evaluate(Ljava/lang/String;) (expr);
       };
+
+      var calcEngine = new CalcEngine();
+
+      $wnd.calcEngineReady(calcEngine);
+
     }-*/;
  }
