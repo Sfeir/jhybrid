@@ -47,6 +47,15 @@ Example :
 - Read and follow the displayed indications
 - To stop jetty, run the command `mvn jetty:stop`
 
+### Testing Chrome App
+
+- Go to `demo/calc-engine-js-demo` directory
+- Run command `mvn package`
+- Launch your *Chrome Browser* and bring up the extensions tab by taping `chrome://extensions/` in the address bar.
+- Make sure the *Developer mode* checkbox has been checked.
+- Click the *Load unpacked extension* button, navigate to the `demo/calc-engine-js-demo/target/calc-engine-js-demo-1.0-SNAPSHOT/` folder, then click OK.
+- The application is installed, you can now launch it by clicking on its icon in the Applications panel.
+
 ### Testing Android
 
 #### Setup
