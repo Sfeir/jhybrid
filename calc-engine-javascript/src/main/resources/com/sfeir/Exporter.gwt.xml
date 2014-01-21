@@ -5,4 +5,7 @@
     <inherits name="com.sfeir.CalcEngine"/>
 	<source path='exporter' />
     <entry-point class="com.sfeir.exporter.Exporter"/>
+    <define-linker name="csp" class="com.sfeir.linker.CSPCompatibleLinker"/>
+    <add-linker name="csp" />
+    <set-property name="user.agent" value="safari" />
 </module>

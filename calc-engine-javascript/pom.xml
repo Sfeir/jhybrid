@@ -35,6 +35,10 @@
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -76,7 +80,8 @@
                     <gen>${project.build.directory}/gwt/gen</gen>
                     <extra>${project.build.directory}/gwt/extra</extra>
                     <persistentunitcachedir>${project.build.directory}/gwt</persistentunitcachedir>
-                    <treeLogger>true</treeLogger>
+                    <!--<treeLogger>true</treeLogger>-->
+                    <style>PRETTY</style>
                 </configuration>
             </plugin>
         </plugins>
