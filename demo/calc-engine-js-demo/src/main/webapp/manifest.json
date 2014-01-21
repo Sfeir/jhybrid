@@ -1,0 +1,12 @@
+{
+    "name": "CalcEngine",
+    "description": "Calculation Engine Chrome App.",
+    "manifest_version": 2,
+    "version": "0.1",
+    "app": {
+        "background": {
+            "scripts": ["main.js"]
+        }
+    },
+    "icons": { "16": "ico/16.png", "128": "ico/128.png" }
+}
