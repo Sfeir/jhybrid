@@ -5,7 +5,7 @@ SOURCE_DIR = ../../calc-engine-core/src/main/java
 JAVA_SOURCES = sources.list
 
 # Change to where distribution was unzipped.
-J2OBJC_DISTRIBUTION = /Users/DidierGirard/softs/j2objc-0.8.8
+J2OBJC_DISTRIBUTION = /Users/preetam/Documents/java_to_objc/j2objc-1.0.2
 J2OBJC = $(J2OBJC_DISTRIBUTION)/j2objc
 J2OBJCC = $(J2OBJC_DISTRIBUTION)/j2objcc
 
